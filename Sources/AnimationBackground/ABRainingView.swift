@@ -63,7 +63,7 @@ extension ABRainingView {
             let randomXCoordinate = Double.random(in: 0..<1) * viewWidth
 
             NSLayoutConstraint.activate([
-                imageView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 20),
+                imageView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: viewWidth / 10),
                 imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: randomXCoordinate),
                 imageView.widthAnchor.constraint(equalToConstant: viewWidth / 10),
                 imageView.heightAnchor.constraint(equalToConstant: viewWidth / 10),
