@@ -29,6 +29,7 @@ public final class ABCheckBoardView: UIView {
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
+        self.clipsToBounds = true
         
     }
     
