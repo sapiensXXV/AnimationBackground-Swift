@@ -16,9 +16,7 @@ public final class ABRisingView: UIView {
         return images.count
     }
     
-    enum Metric: Int {
-        case maximumImageCount = 40
-    }
+    private var maximumImageCount = 40
     
     public convenience init(opacity: Float) {
         self.init(frame: CGRect())
@@ -39,7 +37,7 @@ public final class ABRisingView: UIView {
 extension ABRisingView {
     
     public func activate() {
-        for count in 0..<Metric.maximumImageCount.rawValue {
+        for count in 0..<maximumImageCount {
             let image = images[count % numberOfImage]
             let imageView: UIImageView = UIImageView(image: image)
             imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -63,7 +61,7 @@ extension ABRisingView {
             
             UIView.animate(
                 withDuration: 1.5,
-                delay: (1.5 / Double(Metric.maximumImageCount.rawValue)) * Double(index),
+                delay: (1.5 / Double(maximumImageCount)) * Double(index),
                 options: [.repeat, .curveEaseIn]
             ) {
                 imageView.frame.origin.y -= viewHeight + 2 * (viewWidth / 10)
