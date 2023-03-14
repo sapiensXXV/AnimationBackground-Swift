@@ -1,4 +1,7 @@
 # AnimationBackground
+
+> When you're creating UI in code, there are times when you want animated screens, and this library can help you with that. Use the default shaped views and customize them easily
+
 `AnimationBackground` is a library that provides developers with screens with simple animation effects. You can include it in your project through the Swift Package Manager. 
 
 ## Installation
