@@ -8,7 +8,7 @@
 import UIKit
 
 /// A protocol vertical animated views. Like ABRainingView, ABRisingView
-protocol VerticalAnimationProtocol: AnyObject {
+public protocol VerticalAnimationProtocol: AnyObject {
     var images: [UIImage] { get set }
     var maximumImageCount: Int { get set }
     var animationSpeed: AnimationSpeed { get set }

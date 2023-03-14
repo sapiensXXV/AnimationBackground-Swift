@@ -18,9 +18,9 @@ public final class ABRainingView: UIView, VerticalAnimationProtocol {
         return images.count
     }
     
-    var images: [UIImage] = []
-    var maximumImageCount: Int = 40
-    var animationSpeed: AnimationSpeed = .normal
+    public var images: [UIImage] = []
+    public var maximumImageCount: Int = 40
+    public var animationSpeed: AnimationSpeed = .normal
     
     public convenience init(opacity: Float) {
         self.init(frame: CGRect())
