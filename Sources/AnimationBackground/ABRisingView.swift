@@ -7,8 +7,8 @@
 
 import UIKit
 
-public final class ABRisingView: UIView {
-
+public final class ABRisingView: UIView, VerticalAnimationProtocol {
+    
     private var images: [UIImage] = []
     private var imageViews: [UIImageView] = []
     private var imageOpacity: Float = 1.0
@@ -16,7 +16,9 @@ public final class ABRisingView: UIView {
         return images.count
     }
     
-    private var maximumImageCount = 40
+    // properties of VerticalAnimationProtocol
+    var maximumImageCount: Int = 40
+    var animationSpeed: AnimationSpeed = .normal
     
     public convenience init(opacity: Float) {
         self.init(frame: CGRect())
@@ -60,7 +62,7 @@ extension ABRisingView {
             ])
             
             UIView.animate(
-                withDuration: 1.5,
+                withDuration: Double(self.animationSpeed.rawValue),
                 delay: (1.5 / Double(maximumImageCount)) * Double(index),
                 options: [.repeat, .curveEaseIn]
             ) {

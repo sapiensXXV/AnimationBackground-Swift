@@ -10,7 +10,7 @@ import UIKit
 /// This class inherits from the UIView to show the rain effect.
 /// You can register images with the `configureImages(images:)` method and activate the animation
 /// with the `activate()` method.
-public final class ABRainingView: UIView {
+public final class ABRainingView: UIView, VerticalAnimationProtocol {
     
     private var images: [UIImage] = []
     private var imageViews: [UIImageView] = []
@@ -19,7 +19,8 @@ public final class ABRainingView: UIView {
         return images.count
     }
     
-    private var maximumImageCount = 40
+    var maximumImageCount: Int = 40
+    var animationSpeed: AnimationSpeed = .normal
     
     public convenience init(opacity: Float) {
         self.init(frame: CGRect())
@@ -68,7 +69,7 @@ extension ABRainingView {
             ])
             
             UIView.animate(
-                withDuration: 1.5,
+                withDuration: Double(self.animationSpeed.rawValue),
                 delay: (1.5 / Double(self.maximumImageCount)) * Double(index),
                 options: [.repeat, .curveEaseIn]
             ) {
