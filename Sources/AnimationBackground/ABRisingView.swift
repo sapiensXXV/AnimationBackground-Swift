@@ -7,7 +7,7 @@
 
 import UIKit
 
-public final class ABRisingView: UIView, VerticalAnimationProtocol {
+public final class ABRisingView: UIView {
     
     private var imageViews: [UIImageView] = []
     private var imageOpacity: Float = 1.0
@@ -16,9 +16,9 @@ public final class ABRisingView: UIView, VerticalAnimationProtocol {
     }
     
     // properties of VerticalAnimationProtocol
-    public var images: [UIImage] = []
-    public var maximumImageCount: Int = 40
-    public var animationSpeed: AnimationSpeed = .normal
+    private var images: [UIImage] = []
+    private var maximumImageCount: Int = 40
+    private var animationSpeed: AnimationSpeed = .normal
     
     public convenience init(opacity: Float) {
         self.init(frame: CGRect())
@@ -69,5 +69,17 @@ extension ABRisingView {
                 imageView.frame.origin.y -= viewHeight + 2 * (viewWidth / 10)
             }
         }
+    }
+    
+    public func configureImages(images: [UIImage]) {
+        self.images = images
+    }
+    
+    public func configureImageNumber(to count: Int) {
+        self.maximumImageCount = count
+    }
+    
+    public func configureSpeed(to speed: AnimationSpeed) {
+        self.animationSpeed = speed
     }
 }
