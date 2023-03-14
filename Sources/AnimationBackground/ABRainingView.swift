@@ -12,13 +12,13 @@ import UIKit
 /// with the `activate()` method.
 public final class ABRainingView: UIView, VerticalAnimationProtocol {
     
-    private var images: [UIImage] = []
     private var imageViews: [UIImageView] = []
     private var imageOpacity: Float = 1.0
     private var numberOfImage: Int {
         return images.count
     }
     
+    var images: [UIImage] = []
     var maximumImageCount: Int = 40
     var animationSpeed: AnimationSpeed = .normal
     
@@ -76,9 +76,5 @@ extension ABRainingView {
                 imageView.frame.origin.y += self.bounds.height + viewWidth / 10
             }
         }
-    }
-    
-    public func configureImages(images: [UIImage]) {
-        self.images = images
     }
 }

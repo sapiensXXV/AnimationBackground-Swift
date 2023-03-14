@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum AnimationSpeed: Float {
+public enum AnimationSpeed: Float {
     case superSlow = 3.0
     case slow = 2.3
     case normal = 1.5
