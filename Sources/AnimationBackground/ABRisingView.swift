@@ -8,17 +8,17 @@
 import UIKit
 
 public final class ABRisingView: UIView {
-
-    private var images: [UIImage] = []
+    
     private var imageViews: [UIImageView] = []
     private var imageOpacity: Float = 1.0
     private var numberOfImage: Int {
         return images.count
     }
     
-    enum Metric: Int {
-        case maximumImageCount = 40
-    }
+    // properties of VerticalAnimationProtocol
+    private var images: [UIImage] = []
+    private var maximumImageCount: Int = 40
+    private var animationSpeed: AnimationSpeed = .normal
     
     public convenience init(opacity: Float) {
         self.init(frame: CGRect())
@@ -39,7 +39,7 @@ public final class ABRisingView: UIView {
 extension ABRisingView {
     
     public func activate() {
-        for count in 0..<Metric.maximumImageCount.rawValue {
+        for count in 0..<maximumImageCount {
             let image = images[count % numberOfImage]
             let imageView: UIImageView = UIImageView(image: image)
             imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -62,8 +62,8 @@ extension ABRisingView {
             ])
             
             UIView.animate(
-                withDuration: 1.5,
-                delay: (1.5 / Double(Metric.maximumImageCount.rawValue)) * Double(index),
+                withDuration: Double(self.animationSpeed.rawValue),
+                delay: (Double(self.animationSpeed.rawValue) / Double(maximumImageCount)) * Double(index),
                 options: [.repeat, .curveEaseIn]
             ) {
                 imageView.frame.origin.y -= viewHeight + 2 * (viewWidth / 10)
@@ -75,4 +75,11 @@ extension ABRisingView {
         self.images = images
     }
     
+    public func configureImageNumber(to count: Int) {
+        self.maximumImageCount = count
+    }
+    
+    public func configureSpeed(to speed: AnimationSpeed) {
+        self.animationSpeed = speed
+    }
 }

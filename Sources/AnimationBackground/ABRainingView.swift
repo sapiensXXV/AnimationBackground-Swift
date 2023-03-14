@@ -12,16 +12,15 @@ import UIKit
 /// with the `activate()` method.
 public final class ABRainingView: UIView {
     
-    private var images: [UIImage] = []
     private var imageViews: [UIImageView] = []
     private var imageOpacity: Float = 1.0
     private var numberOfImage: Int {
         return images.count
     }
     
-    enum Metric: Int {
-        case maximumImageCount = 40
-    }
+    private var images: [UIImage] = []
+    private var maximumImageCount: Int = 40
+    private var animationSpeed: AnimationSpeed = .normal
     
     public convenience init(opacity: Float) {
         self.init(frame: CGRect())
@@ -47,7 +46,7 @@ extension ABRainingView {
     public func activate() {
         
         // 처음에는 10개 정도의 이미지를 등록해보자
-        for count in 0..<Metric.maximumImageCount.rawValue {
+        for count in 0..<maximumImageCount {
             let image = images[count % numberOfImage]
             let imageView: UIImageView = UIImageView(image: image)
             imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -70,8 +69,8 @@ extension ABRainingView {
             ])
             
             UIView.animate(
-                withDuration: 1.5,
-                delay: (1.5 / Double(Metric.maximumImageCount.rawValue)) * Double(index),
+                withDuration: Double(self.animationSpeed.rawValue),
+                delay: (Double(self.animationSpeed.rawValue) / Double(self.maximumImageCount)) * Double(index),
                 options: [.repeat, .curveEaseIn]
             ) {
                 imageView.frame.origin.y += self.bounds.height + viewWidth / 10
@@ -81,5 +80,13 @@ extension ABRainingView {
     
     public func configureImages(images: [UIImage]) {
         self.images = images
+    }
+    
+    public func configureImageNumber(to count: Int) {
+        self.maximumImageCount = count
+    }
+    
+    public func configureSpeed(to speed: AnimationSpeed) {
+        self.animationSpeed = speed
     }
 }
