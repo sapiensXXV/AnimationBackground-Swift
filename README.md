@@ -18,7 +18,7 @@ As of 2022-02-19, two features are available.
 
 |**`ABRainingView`**|**`ABRisingView`**|**`ABCheckboardView`**|
 |:-:|:-:|:-:|
-|![ABRainingView Example](https://user-images.githubusercontent.com/76734067/219017953-0ac70ea0-5a0a-40b5-b841-b6d32dee2d0f.gif)|![ABRisingView Exaple](https://user-images.githubusercontent.com/76734067/219018256-ebea6126-68e9-4c6d-b9a9-9a02b3bec2fa.gif)|![ABCheckboardView Example](https://user-images.githubusercontent.com/76734067/219884466-b4154285-3820-4e2b-acae-1332d95034d9.gif)|
+|<img width="200" src="https://user-images.githubusercontent.com/76734067/219017953-0ac70ea0-5a0a-40b5-b841-b6d32dee2d0f.gif">|<img width="200" src="https://user-images.githubusercontent.com/76734067/219018256-ebea6126-68e9-4c6d-b9a9-9a02b3bec2fa.gif">|<img width="200" src="https://user-images.githubusercontent.com/76734067/219884466-b4154285-3820-4e2b-acae-1332d95034d9.gif">|
 
 
 ### ABRainingView, ABRisingView
@@ -59,7 +59,7 @@ There are five types of animation speeds.
 
 |**`superSlow`**|**`slow`**|**`normal`**|**`fast`**|**`superFast`**|
 |:-:|:-:|:-:|:-:|:-:|
-|![superslow](https://user-images.githubusercontent.com/76734067/225113866-6d3557f2-fcf6-4d60-a884-006f83cd9d29.gif)|![slow](https://user-images.githubusercontent.com/76734067/225113876-5d6ffe7e-766d-47a7-9760-76ce791a7c1e.gif)|![normal](https://user-images.githubusercontent.com/76734067/225113895-eed885af-fa92-4842-b084-5b2c4373dd93.gif)|![fast](https://user-images.githubusercontent.com/76734067/225113906-49aacfc6-88d5-4adc-824e-cab161466961.gif)|![superfast](https://user-images.githubusercontent.com/76734067/225113912-2c021cb1-dc58-452a-b218-3eb9b2bdc8e2.gif)|
+|<img width="130" src="https://user-images.githubusercontent.com/76734067/225113866-6d3557f2-fcf6-4d60-a884-006f83cd9d29.gif">|<img width="130" src="https://user-images.githubusercontent.com/76734067/225113876-5d6ffe7e-766d-47a7-9760-76ce791a7c1e.gif">|<img width="130" src="https://user-images.githubusercontent.com/76734067/225113895-eed885af-fa92-4842-b084-5b2c4373dd93.gif">|<img width="130" src="https://user-images.githubusercontent.com/76734067/225113906-49aacfc6-88d5-4adc-824e-cab161466961.gif">|<img width="130" src="https://user-images.githubusercontent.com/76734067/225113912-2c021cb1-dc58-452a-b218-3eb9b2bdc8e2.gif">|
 
 ```swift
 animationView.configureSpeed(to: .superFast) // set animation speed to 'superFast'
