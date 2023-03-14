@@ -63,7 +63,7 @@ extension ABRisingView {
             
             UIView.animate(
                 withDuration: Double(self.animationSpeed.rawValue),
-                delay: (1.5 / Double(maximumImageCount)) * Double(index),
+                delay: (Double(self.animationSpeed.rawValue) / Double(maximumImageCount)) * Double(index),
                 options: [.repeat, .curveEaseIn]
             ) {
                 imageView.frame.origin.y -= viewHeight + 2 * (viewWidth / 10)

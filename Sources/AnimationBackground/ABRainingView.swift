@@ -70,7 +70,7 @@ extension ABRainingView {
             
             UIView.animate(
                 withDuration: Double(self.animationSpeed.rawValue),
-                delay: (1.5 / Double(self.maximumImageCount)) * Double(index),
+                delay: (Double(self.animationSpeed.rawValue) / Double(self.maximumImageCount)) * Double(index),
                 options: [.repeat, .curveEaseIn]
             ) {
                 imageView.frame.origin.y += self.bounds.height + viewWidth / 10
