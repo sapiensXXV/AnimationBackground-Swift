@@ -12,9 +12,13 @@ public struct ABBoundingConfiguration {
     let rotationSpeed: CGFloat
     let velocity: CGFloat
     
-    public init() {
-        self.imageSize = 100
-        self.rotationSpeed = 8
-        self.velocity = 60
+    public init(
+        imageSize: CGFloat = 100,
+        rotationSpeed: CGFloat = 8,
+        velocity: CGFloat = 60
+    ) {
+        self.imageSize = imageSize
+        self.rotationSpeed = rotationSpeed
+        self.velocity = velocity
     }
 }
