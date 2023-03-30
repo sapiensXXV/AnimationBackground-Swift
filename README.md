@@ -27,7 +27,7 @@ As of 2022-02-19, two features are available.
 
 |**`ABRainingView`**|**`ABRisingView`**|**`ABCheckboardView`**|**`ABBoundingView`**|
 |:-:|:-:|:-:|:-:|
-|<img width="200" src="https://user-images.githubusercontent.com/76734067/219017953-0ac70ea0-5a0a-40b5-b841-b6d32dee2d0f.gif">|<img width="200" src="https://user-images.githubusercontent.com/76734067/219018256-ebea6126-68e9-4c6d-b9a9-9a02b3bec2fa.gif">|<img width="200" src="https://user-images.githubusercontent.com/76734067/219884466-b4154285-3820-4e2b-acae-1332d95034d9.gif">|<img width="200" src="https://user-images.githubusercontent.com/76734067/228921538-87023a04-f45a-49fe-a2bd-cc2fcce0d7c6.gif">|
+|<img width="180" src="https://user-images.githubusercontent.com/76734067/219017953-0ac70ea0-5a0a-40b5-b841-b6d32dee2d0f.gif">|<img width="180" src="https://user-images.githubusercontent.com/76734067/219018256-ebea6126-68e9-4c6d-b9a9-9a02b3bec2fa.gif">|<img width="180" src="https://user-images.githubusercontent.com/76734067/219884466-b4154285-3820-4e2b-acae-1332d95034d9.gif">|<img width="180" src="https://user-images.githubusercontent.com/76734067/228921538-87023a04-f45a-49fe-a2bd-cc2fcce0d7c6.gif">|
 
 
 ### ABRainingView, ABRisingView
