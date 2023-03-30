@@ -115,7 +115,7 @@ let boundingView = ABBoundingView(
 2. Then add it as a subview, give it the constraints you want, and that's it.
 ```swift
 view.addSubView(boundingView)
-// your constaint configuration...
+// your constraint configuration...
 ```
 
 You can also use `ABBoundingConfiguration`, a structure that provides configuration information for an `ABBoundingView`, to provide optional information at initialization time. You can set the movement speed, rotation speed, and size of the image.
