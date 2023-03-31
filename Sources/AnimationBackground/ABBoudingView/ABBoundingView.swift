@@ -111,7 +111,7 @@ final public class ABBoundingView: UIView {
         switch direction {
         case .topRight, .bottomLeft:
             let k = y - x
-//            print("함수는 y = x + \(k)")
+
             if -k >= 0 && -k <= width && direction == .bottomLeft {
                 return CollideInfo(nextPoint: CGPoint(x: -k, y: height), direction: .vertical)
             } else if width+k >= 0 && width+k <= height && direction == .topRight {
