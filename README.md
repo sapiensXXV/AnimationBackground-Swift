@@ -15,7 +15,7 @@
 ## Installation
 The following URLs are available for inclusion in the Swift Package Manager.
 ```
-https://github.com/January1st-98/AnimationBackground-Swift.git
+https://github.com/mynameisjaehoon/AnimationBackground-Swift
 ```
 
 ## Usage
