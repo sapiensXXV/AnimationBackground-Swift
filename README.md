@@ -8,7 +8,7 @@
 - [Usage](#usage)
     - [ABRainingView, ABRisingView](#abrainingview-abrisingview)
     - [ABCheckboardView](#abcheckboardview)
-    - [ABBoundingView](#abboundingview)
+    - [ABBoundingView](#abboundingview) ([how I develop ABBoundingView](https://docs.google.com/document/d/1_6TIT8eN5gfK5PnjrJDrmMsOWyLnwRHBmKaLOpkAuwo/edit?usp=sharing))
 - [Author](#author)
 - [License](#license)
 
