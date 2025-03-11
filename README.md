@@ -141,7 +141,7 @@ let boundingView = ABBoundingView(
 ```
     
 ## Author
-- [Jaehoon So](https://github.com/mynameisjaehoon)
+- [Jaehoon So](https://github.com/sapiensxxv)
 - E-mail: jhspacelover@naver.com
 
 ## License
